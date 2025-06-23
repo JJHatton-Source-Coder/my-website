@@ -2,26 +2,58 @@
 <html>
 <head>
   <title>Jeremiah's First Webpage</title>
+
+  <!-- Responsive scaling on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Add a mystical font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
   <style>
     body {
       background-color: #202020;
       color: #f0f0f0;
       font-family: sans-serif;
       text-align: center;
-      margin-top: 100px;
+      padding: 2em;
     }
+
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       color: #00ffaa;
+      font-family: 'Cinzel Decorative', cursive;
+      letter-spacing: 2px;
+      margin-bottom: 1em;
+    }
+
+    .top-image {
+      width: 30%;
+      max-width: 100%;
+      height: auto;
+      margin: 1em 0;
+    }
+
+    .bottom-image {
+      width: 60%;
+      max-width: 100%;
+      height: auto;
+      margin: 1em 0;
+      border-radius: 12px;
+    }
+
+    p {
+      font-size: 1.2em;
+      padding: 0 1em;
     }
   </style>
 </head>
 <body>
-  <img src="I AM Becoming.png" alt="A radiant moment captured" width="200">
+
+  <img src="I AM Becoming.png" alt="A radiant moment captured" class="top-image">
   <h1>Hello World!</h1>
-  
-  <img src="Still Water.png" alt="Wise Words" width="400">
+  <img src="Still Water.png" alt="Wise Words" class="bottom-image">
   <p>A place where <em>thoughts</em> become <strong>reality</strong>.</p>
-  
+
 </body>
 </html>
+
