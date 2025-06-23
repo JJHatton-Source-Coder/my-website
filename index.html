@@ -6,7 +6,7 @@
   <!-- Responsive scaling on mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Add a mystical font from Google Fonts -->
+  <!-- Mystical font -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
 
   <style>
@@ -31,6 +31,7 @@
       max-width: 100%;
       height: auto;
       margin: 1em 0;
+      z-index: 1;
     }
 
     .bottom-image {
@@ -41,16 +42,78 @@
       border-radius: 12px;
     }
 
+    .icon-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1em;
+      position: relative;
+    }
+
+    .icon {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1rem;
+      color: #ffffff;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .smoke-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+      z-index: 0;
+      border-radius: 12px;
+    }
+
+    .icon span {
+      position: relative;
+      z-index: 2;
+      padding: 0.5em;
+      text-shadow: 0 0 6px #000;
+    }
+
     p {
       font-size: 1.2em;
       padding: 0 1em;
+    }
+
+    @media screen and (max-width: 768px) {
+      .icon-wrapper {
+        flex-direction: column;
+      }
+      .icon {
+        margin: 0.5em 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <img src="I AM Becoming.png" alt="A radiant moment captured" class="top-image">
+  <div class="icon-wrapper">
+    <div class="icon">
+      <img src="smoke_left.png" alt="Smoke Left" class="smoke-bg">
+      <span>Who Am I?</span>
+    </div>
+
+    <img src="I AM Becoming.png" alt="A radiant moment captured" class="top-image">
+
+    <div class="icon">
+      <img src="smoke_right.png" alt="Smoke Right" class="smoke-bg">
+      <span>What Will I Become?</span>
+    </div>
+  </div>
+
   <h1>Hello World!</h1>
+
   <img src="Still Water.png" alt="Wise Words" class="bottom-image">
   <p>A place where <em>thoughts</em><br> become <strong>reality</strong>.</p>
 
